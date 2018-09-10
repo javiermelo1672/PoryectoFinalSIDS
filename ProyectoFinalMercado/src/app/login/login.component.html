@@ -1,3 +1,11 @@
-<p>
-  login works!
-</p>
+<div class="form-container">
+  <img src="assets/images/lock.svg" id="lock">
+
+    <span class="error" *ngIf="error">{{ error }}</span>
+
+  <button (click)="loginFb()" id="fb">Iniciar con Facebook</button><br>
+  <button (click)="loginGoogle()" id="google">Iniciar con Google</button>
+  <button routerLink="/login-email" id="email">Iniciar con correo</button>
+
+  <a routerLink="/signup" routerLinkActive="active" class="alc">No tiene una cuenta <strong>Crea una cuenta aquí</strong></a>
+</div>
